@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CV GENERATOR
+             DEVELOPED BY SOHAIL SHAIKH </h1>
+        
+        <form id="cv-form">
+            <h2>Personal Information</h2>
+            <label>Full Name:</label>
+            <input type="text" id="name" required>
+            
+            <label>Email:</label>
+            <input type="email" id="email" required>
+            
+            <label>Phone:</label>
+            <input type="text" id="phone" required>
+            
+            <label>Address:</label>
+            <input type="text" id="address" required>
+            
+            <label>Objective:</label>
+            <textarea id="objective" rows="3" required></textarea>
+            
+            <h2>Qualifications</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Degree Name</th>
+                        <th>Board/Institution</th>
+                        <th>Grade</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody id="cv-education"></tbody>
+            </table>
+            <textarea id="education" rows="3" placeholder="Degree Name, Board/Institution, Grade, Year" required></textarea>
+            
+            <h2>Experience</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Organization</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody id="cv-experience"></tbody>
+            </table>
+            <textarea id="experience" rows="3" placeholder="Job Title, Organization, Duration" required></textarea>
+            
+            <h2>Certifications</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Certification Name</th>
+                        <th>Issued By</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody id="cv-certifications"></tbody>
+            </table>
+            <textarea id="certifications" rows="2" placeholder="Certification Name, Issued By, Year"></textarea>
+            
+            <h2>Computer Skills</h2>
+            <input type="text" id="skills" placeholder="Comma separated (e.g. MS Office, HTML, CSS)" required>
+            
+            <h2>Personal Profile</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="cv-personal-profile"></tbody>
+            </table>
+            <textarea id="personal-profile" rows="3" placeholder="Field, Details" required></textarea>
+            
+            <button type="button" onclick="generateCV()">Generate CV</button>
+        </form>
+        
+        <div id="cv-output" style="display:none;">
+            <div class="cv">
+                <h2 id="cv-name"></h2>
+                <p><strong>Email:</strong> <span id="cv-email"></span></p>
+                <p><strong>Phone:</strong> <span id="cv-phone"></span></p>
+                <p><strong>Address:</strong> <span id="cv-address"></span></p>
+                <h3>Objective</h3>
+                <p id="cv-objective"></p>
+                
+                <h3>Qualifications</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Degree Name</th>
+                            <th>Board/Institution</th>
+                            <th>Grade</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cv-education"></tbody>
+                </table>
+                
+                <h3>Experience</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Organization</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cv-experience"></tbody>
+                </table>
+                
+                <h3>Certifications</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Certification Name</th>
+                            <th>Issued By</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cv-certifications"></tbody>
+                </table>
+                
+                <h3>Computer Skills</h3>
+                <p id="cv-skills"></p>
+                
+                <h3>Personal Profile</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cv-personal-profile"></tbody>
+                </table>
+                
+                <button onclick="printCV()">Print CV</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+
+
+
+<h2 DEVELOPED BY SOHAIL SHAIKH ></h2>
+CONTACT 03171207940
+EMAIL mmuhammadsuhail234@gmail.com
+</html>
